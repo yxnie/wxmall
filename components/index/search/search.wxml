@@ -1,0 +1,27 @@
+<view class="flex wrap">
+  <view class="listOne">
+    <van-search value="{{ inputValue }}" focus="{{true}}" placeholder="请输入关键词" shape="round" bind:change="goSearch" />
+  </view>
+  <view class="back" bindtap="goBack">取消</view>
+</view>
+<view wx:if="{{!value}}">
+  <view class="wrap">
+    <view class="marginY listAll" wx:if="{{data.historyData.length>0}}">
+      <view>搜索历史</view>
+      <view bindtap="deleterAll">
+        <van-icon name="delete" size="40rpx" />
+      </view>
+    </view>
+    <view class="listAllStart" wx:if="{{data.historyData.length>0}}">
+      <view wx:for="{{data.historyData}}" wx:key="index" class="bigTag {{item.is_hot?'hot':''}}" bindtap="goInput" data-item="{{item.keyword}}">{{item.keyword}}</view>
+    </view>
+    <view class="marginY">热门搜索</view>
+    <view class="listAllStart">
+      <view wx:for="{{data.hotKeywordList}}" wx:key="index" class="bigTag {{item.is_hot?'hot':''}}" bindtap="goInput" data-item="{{item.keyword}}">{{item.keyword}}</view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{value}}" class="wrap">
+  <view wx:for="{{searchResult}}" wx:key="index" class="marginY name" bindtap="goDetail" data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}</view>
+  <view class="noneData" wx:if="{{searchResult.length===0}}">暂无数据</view>
+</view>

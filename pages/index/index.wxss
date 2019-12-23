@@ -1,0 +1,33 @@
+.top {
+  display: flex;
+}
+.topBefore {
+  font-size: 28rpx;
+  line-height: 108rpx;
+  width: 180rpx;
+  text-align: center;
+}
+.topAfter {
+  flex: 1;
+}
+.new {
+  height: 270rpx;
+  background: #F1F7FC;
+  color: #8CB4D6;  
+}
+.new1 {
+  background: #FCF4DD;
+  color: #B1A279;
+}
+.more {
+  padding: 16rpx 26rpx;
+  margin: 0 auto;
+  font-size: 26rpx;
+  color: #999;
+  background: #D8E4F0;
+  margin-top: 16rpx;
+  width: 104rpx;
+}
+.more1 {
+  background: #F3E9CB;
+}

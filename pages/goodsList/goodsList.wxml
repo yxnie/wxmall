@@ -1,0 +1,22 @@
+<view class="top">
+  <view class="listOne textCenter {{branch===1?'red':''}}" bindtap="checkBranch" data-item="1">综合</view>
+  <view class="listOne center" bindtap="checkBranch" data-item="0">
+    <view class="price {{branch===0?'red':''}}">价格</view>
+    <view>
+      <van-icon name="arrow-up" class="icon {{branch===0 && order?'red':''}}" catchtap="checkOrder" />
+      <van-icon name="arrow-down" class="icon {{branch===0 && !order?'red':''}}" catchtap="checkOrder" />
+    </view>
+  </view>
+  <view class="listOne textCenter {{branch===2?'red':''}}" bindtap="checkBranch" data-item="2">分类</view>
+</view>
+<view class="all">
+  <view class="listAll">
+    <view wx:for="{{data}}" wx:key="index" class="one">
+      <view class="pic">
+        <image src="{{item.list_pic_url}}"></image>
+      </view>
+      <view class="textCenter overflowOne">{{item.name}}</view>
+      <view class="red textCenter">￥{{item.retail_price}}</view>
+    </view>
+  </view>
+</view>

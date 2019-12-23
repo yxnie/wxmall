@@ -1,0 +1,54 @@
+.foot {
+  position: fixed;
+  height: 120rpx;
+  bottom: 0;
+  width: 96%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2%;
+  font-size: 32rpx;
+}
+
+.before {
+  width: 350rpx;
+  padding: 14rpx 0;
+  border: 1rpx solid rgb(209, 21, 52);
+  text-align: center;
+  color:rgb(209, 21, 52); 
+}
+
+.after {
+  width: 300rpx;
+  padding: 14rpx 0;
+  border: 1rpx solid rgb(13, 156, 27);
+  text-align: center;
+  color: rgb(13, 156, 27);
+}
+.right {
+  background: #b4282d;
+  color: white;
+  width: 130rpx;
+  height: 100%;
+}
+.one {
+  height: 120rpx;
+  margin: 0 20rpx;
+  position: relative;
+  line-height: 60rpx;
+  border-bottom: 2rpx solid #ccc;
+  padding: 20rpx 0;
+}
+.edit {
+  position: absolute;
+  right: 0;
+  font-size: 60rpx;
+  top: 50rpx;
+}
+.front {
+  margin-left: 10rpx;
+  margin-right: 30rpx;
+}
+.tag {
+  margin-top: 12rpx;
+}

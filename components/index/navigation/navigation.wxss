@@ -1,0 +1,8 @@
+@import "/app.wxss";
+.pic {
+  width: 90rpx;
+  height: 90rpx;
+}
+.word {
+  margin-top: 16rpx;
+}

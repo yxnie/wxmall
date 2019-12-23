@@ -1,0 +1,8 @@
+<view wx:for="{{data}}" wx:key="index" class="textCenter line one" bindtap="goDetail" data-id="{{item.id}}">
+  <view class="pic">
+    <image src="{{item.scene_pic_url}}"></image>
+  </view>
+  <view class="overflowOne">{{item.title}}</view>
+  <view class="small overflowOne">{{item.subtitle}}</view>
+  <view class="small red">{{item.price_info}}元起</view>
+</view>

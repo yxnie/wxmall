@@ -1,0 +1,23 @@
+@import "../../lib/wxParse/wxParse.wxss";
+.pic {
+  width: 100%;
+}
+.all {
+  background: #EEEEEE;
+}
+.one{
+  background: white;
+  width: 690rpx;
+  margin: 30rpx auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 20rpx;
+}
+.img {
+  width: 600rpx;
+  height: 320rpx;
+  margin: 30rpx 0;
+}
+
+

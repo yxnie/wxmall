@@ -1,0 +1,58 @@
+.left {
+  width: 160rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.check {
+  border-left: 6rpx solid red;
+  font-size: 38rpx;
+  color: red;
+}
+.right {
+  flex: 1;
+  position: relative;
+}
+.scroll {
+  height: 100%;
+  width: 100%;
+}
+.flex {
+  position: absolute;
+  width: 100%;
+  top: 108rpx;
+  bottom: 0;
+}
+.pic {
+  height: 200rpx;
+}
+.top {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+.desc {
+  position: absolute;
+  top: 100rpx;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+}
+.line {
+  height: 2rpx;
+  background: #999;
+  width: 70rpx;
+}
+.name {
+  margin: 0 20rpx;
+}
+.one {
+  width: 30%;
+  margin-right: 5%;
+}
+.banner {
+  width: 160rpx;
+  height: 160rpx;
+}
+.marginRight {
+  margin-right: 0;
+}

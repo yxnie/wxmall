@@ -1,0 +1,22 @@
+<view class="all">
+  <scroll-view scroll-x="true" class="scroll">
+    <view wx:for="{{list}}" wx:key="index" class="one {{item.id===id?'check':''}}" bindtap="checkType" data-id="{{item.id}}">
+      <view>{{item.name}}</view>
+    </view>
+  </scroll-view>
+  <view class="center allCenter">
+    <view>
+      <view class="textCenter">{{info.name}}</view>
+      <view class="textCenter small">{{info.front_desc}}</view>
+    </view>
+  </view>
+  <view class="listAll">
+    <view wx:for="{{data}}" wx:key="index" class="listone">
+      <view class="pic">
+        <image src="{{item.list_pic_url}}"></image>
+      </view>
+      <view class="textCenter overflowOne">{{item.name}}</view>
+      <view class="red textCenter">￥{{item.retail_price}}</view>
+    </view>
+  </view>
+</view>

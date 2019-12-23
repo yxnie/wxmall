@@ -1,0 +1,92 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" style="height:750rpx;" indicator-active-color="red" wx:if="{{data.gallery.length>0}}">
+  <block wx:for="{{data.gallery}}" wx:key="index">
+    <swiper-item>
+      <image style="display:block;width:100%;margin:0 auto;" src="{{item.img_url}}" class="slide-image" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+<import src="../../lib/wxParse/wxParse.wxml" />
+<view class="listAll title">
+  <view wx:for="{{list}}" wx:key="index" class="flex">
+    <view class="circle">
+      <image src="{{item.img}}"></image>
+    </view>
+    <view>{{item.title}}</view>
+  </view>
+</view>
+<view class="textCenter border">
+  <view class="name">{{data.info.name}}</view>
+  <view class="brief">{{data.info.goods_brief}}</view>
+  <view class="red price">￥{{data.info.retail_price}}</view>
+</view>
+<view class="check" bindtap="checkNum">
+  <view>请选择规格数量</view>
+  <view class="allCenter">
+    <van-icon name="arrow" size="46rpx" />
+  </view>
+</view>
+<view style="height:20rpx;background:#f4f4f4;"></view>
+<view class="attribute">
+  <view class="marginY one">商品参数</view>
+  <block wx:if="{{data.attribute}}">
+  <view wx:for="{{data.attribute}}" wx:key="index" class="flex marginY one">
+    <view class="small">{{item.name}}</view>
+    <view class="overflowTwo">{{item.value}}</view>
+  </view>
+  </block>
+</view>
+<view wx:if="{{data.info.goods_desc}}"><template is="wxParse" data="{{wxParseData:artical.nodes}}" /></view>
+<view class="allCenter marginY">
+  <view class="line"></view>
+  <view class="name1">常见问题</view>
+  <view class="line"></view>
+</view>
+<view wx:for="{{data.issue}}" wx:key="index" class="issue">
+  <view class="question">
+    <view class="dot radius"></view>{{item.question}}</view>
+  <view class="answer">{{item.answer}}</view>
+</view>
+<view class="allCenter look">
+  <view class="line"></view>
+  <view class="name1">大家都在看</view>
+  <view class="line"></view>
+</view>
+<view class="listAll border1">
+  <view wx:for="{{data.productList}}" wx:key="index" class="listone {{index%2===0?'border2':''}}">
+    <view class="pic">
+      <image src="{{item.list_pic_url}}"></image>
+    </view>
+    <view class="textCenter overflowOne productList">{{item.name}}</view>
+    <view class="red textCenter">￥{{item.retail_price}}</view>
+  </view>
+</view>
+<view style="height:100rpx;"></view>
+<van-goods-action class="foot">
+  <van-goods-action-icon icon="like" text="取消收藏" icon-class="red" wx:if="{{collected}}" bind:click="collect" />
+  <van-goods-action-icon icon="like-o" text="收藏" bind:click="collect"  wx:else />
+  <van-goods-action-icon icon="cart-o" text="购物车" bind:click="goCart" info="{{cartNum}}" wx:if="{{cartNum}}" />
+  <van-goods-action-icon icon="cart-o" text="购物车" bind:click="goCart" wx:else />
+  <view class="flex">
+    <van-goods-action-button text="加入购物车" type="warning" bind:click="addCart" />
+    <van-goods-action-button text="立即购买" bind:click="onClickButton" />
+  </view>
+</van-goods-action>
+<van-popup show="{{ show }}" position="bottom" custom-style="height: 40%;" bind:close="onClose" closeable>
+  <view class="popupAll">
+    <view class="flex">
+      <view class="pic1">
+        <image src="{{data.info.list_pic_url}}"></image>
+      </view>
+      <view class="allCenter">
+        <view>
+          <view class="red">价格￥{{data.info.retail_price}}</view>
+          <view>请选择数量</view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view style="padding:20rpx">数量</view>
+      <view style="padding-top:20rpx"><van-stepper value="{{ num }}" input-width="40px" button-size="32px" max="99" bind:change="onChange" /></view>
+    </view>
+  </view>
+</van-popup>

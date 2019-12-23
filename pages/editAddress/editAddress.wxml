@@ -1,0 +1,33 @@
+<block wx:if="{{data.length>0}}">
+  <view wx:for="{{data}}" wx:key="index">
+    <van-swipe-cell right-width="{{ 65 }}">
+      <view class="one" bindtap="editDefult" data-item="{{item}}" data-index="{{index}}">
+        <view class="edit">
+          <van-icon name="edit" catchtap="editAdd" data-item="{{item}}" />
+        </view>
+        <view class="flex">
+          <view class="front">{{item.name}}</view>
+          <view>{{item.mobile}}</view>
+        </view>
+        <view class="flex">
+          <view class="front tag" wx:if="{{item.is_default}}">默认</view>
+          <view class="small overflowOne">{{item.address}} {{item.address_detail}}</view>
+        </view>
+      </view>
+      <view slot="right" class="right allCenter" bindtap="delterOne" data-id="{{item.id}}" data-index="{{index}}">删除</view>
+    </van-swipe-cell>
+  </view>
+</block>
+<view wx:else class="noneData">
+  <view>
+    <view class="textCenter">
+      <van-icon name="location-o" size="200rpx;" />
+    </view>
+    <view>收货地址在哪里？</view>
+  </view>
+</view>
+<view class="foot">
+  <view class="before" bindtap="addAddress">
+    <van-icon name="plus" />新建地址</view>
+  <view class="after">一键导入微信地址</view>
+</view>

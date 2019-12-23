@@ -1,0 +1,8 @@
+<input class="input" bindinput="searchLocation" value="{{value}}" placeholder="请输入搜索地址"></input>
+<map id="myMap"
+   markers="{{markers}}"
+   style="width:100%;height:560px;"
+   longitude="{{longitude}}"
+   latitude="{{latitude}}" scale='16'>
+</map>
+<view wx:for="{{markers}}" wx:key="index" bindtap="checkLocation" data-item="{{item}}">{{item.title}}</view>

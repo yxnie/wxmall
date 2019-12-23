@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-search": "/lib/vant/search/index",
+    "search": "../../components/index/search/search",
+    "banner": "../../components/index/banner/banner",
+    "navigation": "../../components/index/navigation/navigation",
+    "brandList": "../../components/index/brandList/brandList",
+    "newGoods": "../../components/index/newGoods/newGoods",
+    "topicList": "../../components/index/topicList/topicList",
+    "newCategoryList": "../../components/index/newCategoryList/newCategoryList"
+  }
+}

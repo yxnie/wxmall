@@ -1,0 +1,12 @@
+<view class="textCenter marginY titleWord">品牌制造商直供</view>
+<view class="listAll">
+  <view wx:for="{{data}}" wx:key="index" class="one">
+    <view class="name">
+      <view>{{item.name}}</view>
+      <view class="smaller price">{{item.floor_price}}元起</view>
+    </view>
+    <view class="pic">
+      <image src="{{item.new_pic_url}}"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view class="listAll marginY">
+  <view wx:for="{{data}}" wx:key="index" class="listOne allCenter" bindtap="goCategory" data-url="{{item.url}}">
+    <view>
+      <view class="pic">
+        <image src="{{item.icon_url}}"></image>
+      </view>
+      <view class="textCenter word">{{item.name}}</view>
+    </view>
+  </view>
+</view>

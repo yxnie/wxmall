@@ -1,0 +1,21 @@
+.border {
+  margin: 0 30rpx;
+  padding: 30rpx 0;
+  position: relative;
+}
+.num {
+  position: absolute;
+  bottom: 30rpx;
+  right: 20rpx;
+}
+.redButton {
+  background: #b4282d;
+  color: white;
+  width: 680rpx;
+  margin: auto;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 80rpx;
+  text-align: center;
+  font-size: 38rpx;
+}

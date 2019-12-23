@@ -1,0 +1,35 @@
+<view>
+  <van-search value="{{ value }}" placeholder="请输入关键词" clearable shape="round" />
+</view>
+<view class="flex">
+  <view class="left">
+    <view wx:for="{{data.categoryList}}" wx:key="index" bindtap="checkType" class="{{id===item.id?'check':''}}" data-id="{{item.id}}">
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+  <view class="right">
+    <scroll-view scroll-y="true" class="scroll">
+      <view wx:for="{{data.categoryList}}" wx:key="index">
+        <view wx:if="{{id===item.id}}">
+          <view class="top">
+            <view class="desc">{{item.front_desc}}</view>
+            <view class="pic">
+              <image src="{{item.wap_banner_url}}"></image>
+            </view>
+            <view class="allCenter marginY">
+              <view class="line"></view>
+              <view class="name">{{item.name}}分类</view>
+              <view class="line"></view>
+            </view>
+            <view class="listAllStart">
+              <view wx:for="{{currentOne}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1" class="one {{(index1+1)%3===0?'marginRight':''}}" bindtap="goCategoryOne" data-id="{{item1.id}}">
+                <view class="banner"><image src="{{item1.wap_banner_url}}"></image></view>
+                <view class="textCenter">{{item1.name}}</view>
+              </view> 
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

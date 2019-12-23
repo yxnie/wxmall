@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-checkbox": "/lib/vant/checkbox/index",
+    "van-swipe-cell": "/lib/vant/swipe-cell/index"
+  }
+}

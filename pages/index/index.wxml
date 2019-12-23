@@ -1,0 +1,33 @@
+<view wx:if="{{!searchLock}}">
+<view class="wrap">
+  <view class="top">
+    <view class="topBefore overflowOne" wx:if="{{location}}" bindtap="goLocation">{{location}}</view>
+    <view class="topBefore" wx:else bindtap="goLocation">定位中...</view>
+    <view class="topAfter">
+      <van-search value="{{ value }}" placeholder="请输入关键词" bind:focus="openSearch" shape="round" />
+    </view>
+  </view>
+</view>
+<banner imgUrls="{{data.banner}}"></banner>
+<view class="wrap">
+  <navigation data="{{data.channel}}"></navigation>
+  <brandList data="{{data.brandList}}"></brandList>
+</view>
+<view class="allCenter marginY new">
+  <view>
+    <view class="textCenter">新品首发</view>
+    <view class="more" bindtap="goGoodsList" data-item="1">查看更多</view>
+  </view>
+</view>
+<newGoods data="{{data.newGoods}}"></newGoods>
+<view class="allCenter marginY new new1">
+  <view>
+    <view class="textCenter">人气推荐·好物精选</view>
+    <view class="more more1" bindtap="goGoodsList" data-item="0">查看更多</view>
+  </view>
+</view>
+<newGoods data="{{data.hotGoods}}"></newGoods>
+<topicList data="{{data.topicList}}"></topicList>
+<newCategoryList data="{{data.newCategoryList}}"></newCategoryList>
+</view>
+<search wx:if="{{searchLock}}" bind:editSearchLock="editSearchLock"></search>

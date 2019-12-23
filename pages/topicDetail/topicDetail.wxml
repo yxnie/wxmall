@@ -1,0 +1,14 @@
+<import src="../../lib/wxParse/wxParse.wxml" />
+<view class="pic">
+  <template is="wxParse" data="{{wxParseData:artical.nodes}}" />
+</view>
+<view class="all">
+  <view wx:for="{{data.recommendList}}" wx:key="index" class="one">
+    <view>
+      <view class="img">
+        <image src="{{item.scene_pic_url}}"></image>
+      </view>
+      <view class="overflowOne">{{item.title}}</view>
+    </view>
+  </view>
+</view>

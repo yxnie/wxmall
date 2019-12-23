@@ -1,0 +1,136 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.overflowTwo {
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.overflowOne {
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.listAll {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.listAllStart {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listOne {
+  flex: 1;
+}
+
+image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.allCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marginY {
+  margin: 30rpx 0;
+}
+
+.wrap {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.titleWord {
+  font-size: 38rpx;
+}
+
+.small {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.smaller {
+  color: #999;
+  font-size: 26rpx;
+}
+
+.red {
+  color: red;
+}
+
+.flex {
+  display: flex;
+}
+
+.radius {
+  border-radius: 50%;
+}
+
+.angle {
+  border-radius: 10rpx;
+}
+
+.border {
+  border-bottom: 2rpx solid #ccc;
+}
+
+.centerX {
+  display: flex;
+  align-items: center;
+}
+
+.noneData {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 38rpx;
+}
+
+.tag {
+  color: red;
+  border: 2rpx solid red;
+  font-size: 24rpx;
+  line-height: 30rpx;
+  height: 30rpx;
+  padding: 0 10rpx;
+}

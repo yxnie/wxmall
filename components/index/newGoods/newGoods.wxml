@@ -1,0 +1,12 @@
+<view class="wrap">
+  <scroll-view  scroll-x="true" class="scroll">
+  <view class="flex">
+  <view wx:for="{{data}}" wx:key="index" class="one" bindtap="goDetail" data-id="{{item.id}}">
+      <view class="pic"><image src="{{item.list_pic_url}}"></image></view>
+      <view class="overflowOne">{{item.name}}</view>
+      <view class="overflowOne brief">{{item.goods_brief}}</view>
+      <view class="red1">￥{{item.retail_price}}</view>
+    </view>
+  </view>
+  </scroll-view>
+</view>

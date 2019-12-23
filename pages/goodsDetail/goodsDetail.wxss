@@ -1,0 +1,146 @@
+@import "../../lib/wxParse/wxParse.wxss";
+
+image {
+  display: block;
+}
+
+.circle {
+  width: 20rpx;
+  height: 20rpx;
+  margin-top: 40rpx;
+  margin-right: 10rpx;
+}
+
+.title {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  padding: 0 3%;
+  width: 94%;
+  background: #f4f4f4;
+}
+
+.price {
+  padding: 20rpx;
+}
+
+.name {
+  padding-top: 30rpx;
+  font-size: 34rpx;
+}
+
+.brief {
+  padding: 10rpx;
+  font-size: 28rpx;
+}
+
+.border {
+  border-bottom: 1rpx solid #ccc;
+}
+
+.attribute {
+  padding: 0 30rpx;
+  line-height: 44rpx;
+  font-size: 34rpx;
+}
+
+.small {
+  width: 164rpx;
+  font-size: 30rpx;
+}
+
+.one {
+  background: #f7f7f7;
+  padding: 20rpx 16rpx;
+}
+
+.name1 {
+  margin: 0 20rpx;
+}
+
+.line {
+  height: 2rpx;
+  background: #999;
+  width: 70rpx;
+}
+
+.overflowTwo {
+  flex: 1;
+}
+
+.dot {
+  background: red;
+  width: 14rpx;
+  height: 14rpx;
+  display: inline-block;
+  margin-right: 10rpx;
+}
+
+.issue {
+  padding: 0 20rpx;
+}
+
+.answer {
+  color: #999;
+}
+
+.question {
+  padding: 20rpx 0;
+}
+
+.look {
+  padding: 40rpx 0;
+}
+
+.listone {
+  widows: 49%;
+  background: white;
+  margin-top: 10rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+}
+
+.pic {
+  width: 370rpx;
+  height: 360rpx;
+}
+
+.productList {
+  width: 360rpx;
+}
+
+.border1 {
+  border-top: 1rpx solid #f4f4f4;
+}
+
+.border2 {
+  border-right: 1rpx solid #f4f4f4;
+}
+
+button {
+  width: 270rpx !important;
+}
+
+.foot {
+  margin-right: 16rpx;
+}
+.foot view {
+  overflow: unset;
+}
+.check {
+  line-height: 100rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+
+.pic1 {
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+}
+
+.popupAll {
+  padding: 30rpx;
+  line-height: 50rpx;
+}

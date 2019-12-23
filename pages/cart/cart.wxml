@@ -1,0 +1,39 @@
+<view class="all">
+  <view class="listAll">
+    <view wx:for="{{list}}" wx:key="index" class="flex">
+      <view class="circle">
+        <image src="{{item.img}}"></image>
+      </view>
+      <view>{{item.title}}</view>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class="scroll">
+    <view wx:for="{{data}}" wx:key="index">
+      <van-swipe-cell right-width="{{ 65 }}">
+        <view class="one" bindtap="checkOne" data-index="{{index}}">
+          <view class="left">
+            <van-checkbox value="{{ item.checked }}"></van-checkbox>
+          </view>
+          <view class="pic">
+            <image src="{{item.list_pic_url}}"></image>
+          </view>
+          <view class="center">
+            <view>
+              <view class="overflowTwo">{{item.goods_name}}</view>
+              <view>￥{{item.retail_price}}</view>
+            </view>
+          </view>
+          <view class="num centerX">×{{item.number}}</view>
+        </view>
+        <view slot="right" class="right allCenter" bindtap="delterOne" data-id="{{item.id}}" data-index="{{index}}">删除</view>
+      </van-swipe-cell>
+    </view>
+  </scroll-view>
+</view>
+<view class="foot">
+  <view class="before">
+    <van-checkbox value="{{ allChecked }}" bind:change="checkAll">全选<text wx:if="{{num}}">({{num}})</text></van-checkbox>
+  </view>
+  <view class="listOne red">￥{{allPrice}}</view>
+  <view class="after" bindtap="goPay">下单</view>
+</view>

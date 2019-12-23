@@ -1,0 +1,49 @@
+.one {
+  width: 248rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #ccc;
+  border-right: 2rpx solid #ccc;
+  padding: 30rpx 0;
+}
+
+.right {
+  border-right: 0;
+}
+
+.flex {
+  height: 200rpx;
+  background: #b4282d;
+  color: white;
+  line-height: 200rpx;
+  justify-content: space-between;
+  font-size: 40rpx;
+  width: 94%;
+  padding: 0 3%;
+}
+.pic {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  margin-top: 30rpx;
+  margin-right: 20rpx;
+}
+.icon {
+  position: relative;
+  top: 20rpx;
+}
+button {
+  height: 200rpx;
+  width: auto !important;
+  padding: 0 !important;
+  font-size: 40rpx;
+  font-weight: normal;
+  line-height: 200rpx;
+  background: #b4282d;
+  color: white;
+  text-align: start;
+}
+.button-hover {
+  background: #b4282d !important;
+  color: white !important;
+}
+

@@ -1,0 +1,43 @@
+.scroll {
+  height: 104rpx;
+  line-height: 100rpx;
+  white-space: nowrap;
+  background: white;
+}
+
+.one {
+  display: inline-block;
+  margin: 0 20rpx;
+  padding: 0 10rpx;
+}
+
+.check {
+  color: red;
+  border-bottom: 4rpx solid red;
+}
+.all {
+  background: #EEEEEE;
+}
+.center {
+  margin-top: 20rpx;
+  background: white;
+  height: 140rpx;
+}
+.small {
+  margin-top: 16rpx;
+}
+.listone {
+  widows: 49%;
+  background: white;
+  margin-top: 10rpx;
+}
+.pic {
+  width: 370rpx;
+  height: 360rpx;
+}
+.overflowOne {
+  width: 360rpx;
+}
+.red {
+  margin: 16rpx 0;
+}

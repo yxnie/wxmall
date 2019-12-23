@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-icon": "/lib/vant/icon/index",
+    "van-swipe-cell": "/lib/vant/swipe-cell/index"
+  }
+}

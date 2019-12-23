@@ -1,0 +1,51 @@
+<view class="bg"></view>
+<view class="top">
+  <view class="allCenter top" wx:if="{{!data}}" bindtap="goEditAdd">暂无收货地址，请点击此处选择地址</view>
+  <view class="two" wx:else>
+      <view class="edit" bindtap="goEditAdd">
+        <van-icon name="arrow" />
+      </view>
+      <view class="flex">
+        <view class="front">{{data.name}}</view>
+        <view>{{data.mobile}}</view>
+      </view>
+      <view class="flex">
+        <view class="front tag" wx:if="{{data.is_default}}">默认</view>
+        <view class="small overflowOne">{{data.address}} {{data.address_detail}}</view>
+      </view>
+    </view>
+</view>
+<view class="bar"></view>
+<view class="total wrap">
+  <view>商品合计</view>
+  <view>￥{{totle}}</view>
+</view>
+<view class="total wrap">
+  <view>运费</view>
+  <view>免运费</view>
+</view>
+<view class="total wrap bottom">
+  <view>优惠券</view>
+  <view>暂无</view>
+</view>
+<view class="bar"></view>
+<scroll-view scroll-y="true" class="scroll wrap">
+  <view wx:for="{{order}}" wx:key="index">
+    <view class="one" bindtap="checkOne" data-index="{{index}}">
+      <view class="pic">
+        <image src="{{item.list_pic_url}}"></image>
+      </view>
+      <view class="center">
+        <view>
+          <view class="overflowTwo">{{item.goods_name}}</view>
+          <view>￥{{item.retail_price}}</view>
+        </view>
+      </view>
+      <view class="num centerX">×{{item.number}}</view>
+    </view>
+  </view>
+</scroll-view>
+<view class="foot">
+  <view>实付：￥{{totle}}</view>
+  <view class="right1" bindtap="pay">支付</view>
+</view>

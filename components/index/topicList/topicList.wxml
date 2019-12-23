@@ -1,0 +1,17 @@
+<view class="wrap">
+  <view class="textCenter marginY titleWord">专题精选</view>
+  <scroll-view scroll-x="true" class="scroll">
+    <view class="flex">
+      <view wx:for="{{data}}" wx:key="index" class="one" bindtap="goDetail" data-id="{{item.id}}">
+        <view class="pic">
+          <image src="{{item.item_pic_url}}"></image>
+        </view>
+        <view class="flex">
+          <view class="title overflowOne">{{item.title}}</view>
+          <view class="red">￥{{item.price_info}}起</view>
+        </view>
+        <view class="small overflowOne">{{item.subtitle}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

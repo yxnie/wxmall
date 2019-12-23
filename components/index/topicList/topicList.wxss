@@ -1,0 +1,13 @@
+@import "/app.wxss";
+.one {
+  margin-right: 20rpx;
+  line-height: 60rpx;
+}
+.pic {
+  width: 580rpx;
+  height: 400rpx;
+  margin-bottom: 16rpx;
+}
+.title {
+  margin-right: 16rpx;
+}

@@ -1,0 +1,12 @@
+<view class="border">意见与反馈</view>
+<view class="border">
+  <view class="num">{{num}}/150</view>
+  <textarea placeholder="请填写你的意见与反馈" bindinput="getNum"></textarea>
+</view>
+<view class="border flex">
+  <view>联系方式：</view>
+  <view>
+    <input placeholder="邮箱/手机号/微信号"></input>
+  </view>
+</view>
+<view class="redButton angle">提交</view>

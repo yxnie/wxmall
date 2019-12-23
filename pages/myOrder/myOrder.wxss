@@ -1,0 +1,29 @@
+.top {
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  justify-content: center;
+  background: white;
+}
+.all {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: #EEEEEE;
+  z-index: -1;
+}
+.listone {
+  widows: 49%;
+  background: white;
+  margin-top: 10rpx;
+}
+.pic {
+  width: 370rpx;
+  height: 360rpx;
+}
+.red {
+  margin: 16rpx 0;
+}

@@ -1,0 +1,23 @@
+<view class="all">
+  <view wx:for="{{data}}" wx:key="index">
+    <view class="textCenter marginY titleWord">{{item.name}}</view>
+    <view class="listAll">
+      <view wx:for="{{item.goodsList}}" wx:for-item="item1" wx:for-index="index1" wx:key="index1" class="one" bindtap="goDetail" data-id="{{item1.id}}">
+        <view class="pic">
+          <image src="{{item1.list_pic_url}}"></image>
+        </view>
+        <view class="textCenter overflowOne">{{item1.name}}</view>
+        <view class="red textCenter">￥{{item1.retail_price}}</view>
+      </view>
+      <view class="one allCenter" bindtap="goclassify" data-id="{{item.id}}">
+        <view class="flex">
+          <view class="name">{{item.name}}</view>
+          <view class="go">
+            <image src="../../../images/go.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="foot"></view>
+  </view>
+</view>
